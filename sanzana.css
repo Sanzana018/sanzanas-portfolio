@@ -1,0 +1,522 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6d3b3b;
+    color: #333;
+}
+
+/* Heading 2 Styles */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    color: #444;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+h2:hover {
+    color: #1e90ff;
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc); /* Gradient background with multiple colors */
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+/* Welcome Section */
+#welcome {
+    background-color: #efc5e8;
+    padding: 50px;
+    text-align: center;
+}
+
+#welcome h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #333; /* Static color for 'Welcome to' */
+    animation: colorChange 5s infinite; /* Infinite animation for color change */
+}
+
+/* Color-changing effect for "Welcome to Sanzana's Portfolio" */
+.portfolio {
+    display: inline-block; /* Ensures 'Sanzana's Portfolio' is treated separately */
+    animation: colorChange 5s infinite; /* Infinite color-changing animation */
+}
+
+/* Keyframes for color-changing animation */
+@keyframes colorChange {
+    0% { color: #ff4500; } /* Orange Red */
+    25% { color: #32cd32; } /* Lime Green */
+    50% { color: #1e90ff; } /* Dodger Blue */
+    75% { color: #ff69b4; } /* Hot Pink */
+    100% { color: #ff4500; } /* Back to Orange Red */
+}
+
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #eaedf0;
+    color: #8e0f31;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(224, 215, 215, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+.about {
+    color: #2575fc;
+}
+
+
+#about h3, #about p {
+    font-size: 1.2rem;
+    color: #8e0f31;
+    line-height: 1.8;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Typing and Changing Animation */
+.typing-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #020206; /* initial color */
+    border-right: 3px solid #07070b; /* Simulating typing cursor */
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 6s steps(30) 1s forwards, erasing 6s steps(30) 7s infinite, changeText 12s steps(1) 7s infinite;
+}
+
+/* Typing Animation (Typing one letter at a time) */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Erasing Animation (Slowly erasing the text) */
+@keyframes erasing {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Changing Text (Switching words in order) */
+@keyframes changeText {
+    0%, 100% {
+        content: "Web Developer";
+        color: #ff4500; /* Orange Red */
+    }
+    25% {
+        content: "UI/UX Designer";
+        color: #32cd32; /* Lime Green */
+    }
+    50% {
+        content: "Frontend Developer";
+        color: #1e90ff; /* Dodger Blue */
+    }
+    75% {
+        content: "Full-stack Developer";
+        color: #ff69b4; /* Hot Pink */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Skills Section */
+#skills {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #4fccd1;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #1e90ff;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+/* Services Section */
+#services {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service:hover {
+    background-color: #1e90ff;
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 80px 20px;
+    background-color: #e9ecef;
+    text-align: center; /* Ensures text is centered */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-info .project-description {
+    font-size: 1rem;
+    color: #b11187;
+    line-height: 1.6;
+    max-height: 100px; /* Limit the height of description */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add "..." if the description overflows */
+}
+
+.card-info .project-description:hover {
+    max-height: none; /* Expand the description on hover */
+    text-overflow: clip; /* Remove ellipsis */
+}
+
+/* Client Say Section */
+#client-say {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.testimonial-box {
+    width: 350px; /* More width for horizontal elongation */
+    height: auto; /* Height should adjust based on content */
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 50px; /* Rounded corners for cylindrical effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.review {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.client-name {
+    font-size: 1rem;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Education Section */
+#education {
+    padding: 80px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.education-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem; /* Smaller font size */
+    max-width: 90%; /* Limit the width */
+    margin: 0 auto; /* Center the items */
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.education-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    margin-bottom: 8px;
+}
+
+.education-item strong {
+    font-weight: bold;
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1e90ff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navigation items stacked vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .skills-list, .services-list, .portfolio-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    #about img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    #welcome h1 {
+        font-size: 2.5rem;
+    }
+
+    .service, .testimonial-box, .card {
+        width: 90%;
+    }
+
+    .card-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-info .project-description {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-box {
+        width: 90%;
+    }
+} 
